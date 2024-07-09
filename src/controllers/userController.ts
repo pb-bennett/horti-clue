@@ -1,5 +1,6 @@
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 import User from "../models/User";
+import { errorHandler } from "../utils/errorHandler";
 
 interface UserPostBody {
   firstName: string;
@@ -18,12 +19,16 @@ interface UserParams {
   id: string;
 }
 
-const getUsers = async (req: Request, res: Response) => {
+const getUsers = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const users = await User.find();
+    errorHandler("No users found", 404);
     console.log(users);
+
     res.status(200).json({ getUsers: users });
-  } catch (error) {}
+  } catch (error) {
+    next(error);
+  }
 };
 const getUserById = async (req: Request<UserParams>, res: Response) => {
   const { id } = req.params;
@@ -35,7 +40,6 @@ const createUser = async (
   res: Response
 ) => {
   console.log(req.body);
-  // const { name: string } = req.body;
   const { email, password, firstName, lastName } = req.body;
   const newUser = await User.create({ email, password, firstName, lastName });
   res.status(200).json({ createUser: newUser });

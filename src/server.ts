@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 import app from "./app";
+import logger from "./utils/logger";
 
 dotenv.config();
 const port: string = process.env.PORT || "3000";
@@ -30,3 +31,13 @@ mongoose
     console.error("Connection to database failed", error);
     throw error;
   });
+
+process.on("unhandledRejection", (reason: any, promise: Promise<any>) => {
+  logger.error(`Unhandled Rejection at: ${promise}, reason: ${reason}`);
+  process.exit(1); // Optional: exit the process if needed
+});
+
+process.on("uncaughtException", (error: Error) => {
+  logger.error(`Uncaught Exception: ${error.message}`);
+  process.exit(1); // Optional: exit the process if needed
+});
