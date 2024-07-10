@@ -12,7 +12,8 @@ export const ErrorHandlingMiddleware = (
   res: Response,
   next: NextFunction
 ) => {
-  console.log("TEEEEST");
   logger.error(err.message);
-  res.status(err.status || 500).json({ error: err.message });
+  res
+    .status(err.status || 500)
+    .json({ status: err.type || "error", data: { message: err.message } });
 };

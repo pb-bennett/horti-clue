@@ -4,10 +4,11 @@ import { CustomError } from "../types/types";
 //   status?: number;
 // }
 
-const errorHandler = (message: string, errorCode: number): never => {
+const throwError = (message: string, errorCode: number): never => {
   const newError: CustomError = new Error(message);
   newError.status = errorCode;
+  newError.type = newError.status >= 500 || !newError.status ? "error" : "fail";
   throw newError;
 };
 
-export { errorHandler };
+export { throwError };

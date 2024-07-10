@@ -9,6 +9,7 @@ import { ErrorHandlingMiddleware } from "./middleware/errorHandlingMiddleware";
 import userRoutes from "./routes/userRoutes";
 import plantRoutes from "./routes/plantRoutes";
 import speciesRoutes from "./routes/speciesRoutes";
+import authRoutes from "./routes/authRoutes";
 
 // dotenv.config();
 const app = express();
@@ -21,6 +22,7 @@ app.use(loggerMiddleware);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/plants", plantRoutes);
 app.use("/api/v1/species", speciesRoutes);
+app.use("/api/v1/auth", authRoutes);
 
 app.use(ErrorHandlingMiddleware);
 // app.listen(port, () => console.log(`Listening on port ${port}`));
