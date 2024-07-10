@@ -1,25 +1,30 @@
 import { Request, Response, NextFunction } from "express";
 import User from "../models/User";
 import { throwError } from "../utils/errorHandler";
+import {
+  UserParams,
+  RegisterUserRequest,
+  UpdateUserRequest,
+} from "../types/User";
 
-interface UserPostBody {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-}
+// interface UserPostBody {
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+//   password: string;
+//   confirmPassword: string;
+// }
 
-interface UserPatchBody {
-  firstName?: string;
-  lastName?: string;
-  email?: string;
-  password?: string;
-}
+// interface UserPatchBody {
+//   firstName?: string;
+//   lastName?: string;
+//   email?: string;
+//   password?: string;
+// }
 
-interface UserParams {
-  id: string;
-}
+// interface UserParams {
+//   id: string;
+// }
 
 const getUsers = async (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -37,7 +42,7 @@ const getUserById = async (req: Request<UserParams>, res: Response) => {
 };
 
 const createUser = async (
-  req: Request<{}, {}, UserPostBody>,
+  req: Request<{}, {}, RegisterUserRequest>,
   res: Response,
   next: NextFunction
 ) => {
@@ -54,7 +59,7 @@ const createUser = async (
 };
 
 const updateUser = async (
-  req: Request<UserParams, {}, UserPatchBody>,
+  req: Request<UserParams, {}, UpdateUserRequest>,
   res: Response
 ) => {
   const { id } = req.params;

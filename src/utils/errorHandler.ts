@@ -1,14 +1,12 @@
-import { CustomError } from "../types/types";
+import { CustomError } from "./CustomError";
 
 // interface CustomError extends Error {
 //   status?: number;
 // }
 
 const throwError = (message: string, errorCode: number): never => {
-  const newError: CustomError = new Error(message);
-  newError.status = errorCode;
-  newError.type = newError.status >= 500 || !newError.status ? "error" : "fail";
-  throw newError;
+  const error = new CustomError(message, errorCode);
+  throw error;
 };
 
 export { throwError };

@@ -1,13 +1,8 @@
 // models/User.ts
 
-import { Document, model, Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 
-export interface UserDocument extends Document {
-  email: string;
-  password: string;
-  firstName: string;
-  lastName: string;
-}
+import { UserDocument } from "../types/User";
 
 const userSchema = new Schema<UserDocument>({
   email: { type: String, unique: true, required: true },
