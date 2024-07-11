@@ -1,7 +1,7 @@
-import { Request, Response } from 'express';
+import { Request, Response } from "express";
 
 const getPlants = async (req: Request, res: Response) => {
-  res.status(200).send('getPlants!');
+  res.status(200).json({ message: "getPlants!", user: req.user });
 };
 const getPlantById = async (req: Request, res: Response) => {
   const { id } = req.params;

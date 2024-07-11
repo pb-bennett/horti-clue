@@ -11,13 +11,32 @@ interface TokenPayload extends JwtPayload {
   userId: string;
 }
 
-const authHandler = async (req: Request, res: Response, next: NextFunction) => {
+declare module "express-serve-static-core" {
+  interface Request {
+    user?: {
+      email: string;
+      firstName: string;
+      lastName: string;
+      userId: string;
+    };
+  }
+}
+
+export const authHandler = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  console.log("Auth TEST!!!!!!!!");
   try {
-    if (typeof req.headers.authorization !== "string") {
-      return throwError("Token error", 400);
+    const authHeader = req.headers.authorization;
+    // if (!authHeader) next();
+
+    if (typeof authHeader !== "string") {
+      return res.status(400).json({ message: "Token error" });
     }
 
-    const token: string = req.headers.authorization.split(" ")[1];
+    const token: string = authHeader.split(" ")[1];
     const decodedToken = jwt.verify(
       token,
       process.env.JWT_SECRET!
@@ -26,18 +45,17 @@ const authHandler = async (req: Request, res: Response, next: NextFunction) => {
     const user: UserDocument | null = await User.findById(decodedToken.userId);
 
     if (!user) {
-      return throwError("Token error - User does not exist", 404);
+      return res
+        .status(404)
+        .json({ message: "Token error - User does not exist" });
     }
 
     const { email, firstName, lastName, _id: userId } = user;
 
-    req.user = { email, firstName, lastName, userId: userId.toString() }; // Ensure userId is a string
+    req.user = { email, firstName, lastName, userId: userId.toString() };
 
     next();
   } catch (error) {
-    logger.error(error);
     next(error);
   }
 };
-
-export default authHandler;
