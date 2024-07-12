@@ -10,8 +10,6 @@ const speciesUrlSchema = new Schema<SpeciesUrl>(
     },
     url: { type: String, required: true },
     description: { type: String },
-    createdAt: { type: Date, default: Date.now, required: true },
-    updatedAt: { type: Date, default: Date.now, required: true },
     createdBy: { type: Schema.Types.ObjectId, ref: "User", required: true },
   },
   {
@@ -47,4 +45,4 @@ const speciesSchema = new Schema<SpeciesDocument>(
   }
 );
 
-export const Species = model<SpeciesDocument>("Species", speciesSchema);
+export default model<SpeciesDocument>("Species", speciesSchema);

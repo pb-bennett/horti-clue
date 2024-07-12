@@ -10,20 +10,21 @@ export interface PlantNote {
 
 export interface PlantMeasurement {
   _id: Types.ObjectId;
-  height: number;
-  width: number;
+  height?: number;
+  width?: number;
   measuredAt: Date;
   measuredBy: Types.ObjectId;
 }
 
 export interface Plant extends Document {
   species: Types.ObjectId;
-  notes: PlantNote[];
-  location: {
+  notes?: PlantNote[];
+  location?: {
     type: "Point";
     coordinates: [number, number]; // [longitude, latitude]
   };
-  measurements: PlantMeasurement[];
+  measurements?: PlantMeasurement[];
+  garden: Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
 }

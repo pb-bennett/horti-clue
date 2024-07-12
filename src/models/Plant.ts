@@ -3,17 +3,18 @@ import { Plant, PlantNote, PlantMeasurement } from "../types/Plant";
 
 // PlantNote interface and schema
 
-const plantNoteSchema = new Schema<PlantNote>({
-  _id: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    default: () => new Types.ObjectId(),
+const plantNoteSchema = new Schema<PlantNote>(
+  {
+    _id: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      default: () => new Types.ObjectId(),
+    },
+    text: { type: String, required: true },
+    createdBy: { type: Schema.Types.ObjectId, ref: "User", required: true },
   },
-  text: { type: String, required: true },
-  createdAt: { type: Date, default: Date.now, required: true },
-  updatedAt: { type: Date, default: Date.now, required: true },
-  createdBy: { type: Schema.Types.ObjectId, ref: "User", required: true },
-});
+  { timestamps: true }
+);
 
 // PlantMeasurement interface and schema
 
@@ -23,27 +24,27 @@ const plantMeasurementSchema = new Schema<PlantMeasurement>({
     required: true,
     default: () => new Types.ObjectId(),
   },
-  height: { type: Number, required: true },
-  width: { type: Number, required: true },
+  height: { type: Number },
+  width: { type: Number },
   measuredAt: { type: Date, default: Date.now, required: true },
   measuredBy: { type: Schema.Types.ObjectId, ref: "User", required: true },
 });
 
 // Plant interface and schema
 
-const plantSchema = new Schema<Plant>({
-  species: { type: Schema.Types.ObjectId, ref: "Species", required: true },
-  notes: { type: [plantNoteSchema], default: [] },
-  location: {
-    type: { type: String, enum: ["Point"], required: true, default: "Point" },
-    coordinates: { type: [Number], required: true },
+const plantSchema = new Schema<Plant>(
+  {
+    species: { type: Schema.Types.ObjectId, ref: "Species", required: true },
+    notes: { type: [plantNoteSchema], default: [] },
+    location: {
+      type: { type: String, enum: ["Point"], default: "Point" },
+      coordinates: { type: [Number], required: true },
+    },
+    measurements: { type: [plantMeasurementSchema], default: [] },
+    garden: { type: Schema.Types.ObjectId, ref: "Garden", required: true },
   },
-  measurements: { type: [plantMeasurementSchema], default: [] },
-  createdAt: { type: Date, default: Date.now, required: true },
-  updatedAt: { type: Date, default: Date.now, required: true },
-});
+  { timestamps: true }
+);
 
 // Creating Plant model
-const PlantModel = model<Plant>("Plant", plantSchema);
-
-export { PlantModel, PlantNote, PlantMeasurement };
+export default model<Plant>("Plant", plantSchema);
