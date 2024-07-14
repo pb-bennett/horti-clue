@@ -9,9 +9,10 @@ import { authHandler } from "../middleware/authMiddleware";
 
 const router = express.Router();
 
-router.use("/users", authHandler, userRoutes);
-router.use("/plants", authHandler, plantRoutes);
-router.use("/species", authHandler, speciesRoutes);
 router.use("/auth", authRoutes);
+router.use(authHandler);
+router.use("/users", userRoutes);
+router.use("/plants", plantRoutes);
+router.use("/species", speciesRoutes);
 
 export default router;

@@ -2,9 +2,6 @@ import logger from "../utils/logger";
 
 import { NextFunction, Request, Response } from "express";
 import { CustomError } from "../utils/CustomError";
-// interface CustomError extends Error {
-//   status?: number;
-// }
 
 export const ErrorHandlingMiddleware = (
   err: CustomError,
