@@ -2,7 +2,6 @@ import { Schema, model } from "mongoose";
 import { Photo } from "../types/Photo";
 
 // Photo interface and schema
-
 const photoSchema = new Schema<Photo>(
   {
     url: { type: String, required: true },
@@ -11,6 +10,7 @@ const photoSchema = new Schema<Photo>(
     plantReferences: [
       { type: Schema.Types.ObjectId, ref: "Plant", required: true },
     ],
+    garden: { type: Schema.Types.ObjectId, ref: "Garden", required: true },
   },
   { timestamps: true }
 );

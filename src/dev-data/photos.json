@@ -1,0 +1,56 @@
+[
+  {
+    "_id": "60d0fe4f5311236168a10a1",
+    "plantIds": ["60d0fe4f5311236168a109e1", "60d0fe4f5311236168a109e2"],
+    "garden": "60d0fe4f5311236168a109cb",
+    "url": "https://picsum.photos/200/300",
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  },
+  {
+    "_id": "60d0fe4f5311236168a10a2",
+    "plantIds": ["60d0fe4f5311236168a109e3"],
+    "garden": "60d0fe4f5311236168a109cb",
+    "url": "https://picsum.photos/200/301",
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  },
+  {
+    "_id": "60d0fe4f5311236168a10a3",
+    "plantIds": ["60d0fe4f5311236168a109e4"],
+    "garden": "60d0fe4f5311236168a109cb",
+    "url": "https://picsum.photos/200/302",
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  },
+  {
+    "_id": "60d0fe4f5311236168a10a4",
+    "plantIds": ["60d0fe4f5311236168a109e5"],
+    "garden": "60d0fe4f5311236168a109cb",
+    "url": "https://picsum.photos/200/303",
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  },
+  {
+    "_id": "60d0fe4f5311236168a10a5",
+    "plantIds": ["60d0fe4f5311236168a109e6"],
+    "garden": "60d0fe4f5311236168a109cb",
+    "url": "https://picsum.photos/200/304",
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  },
+  {
+    "_id": "60d0fe4f5311236168a10a6",
+    "plantIds": ["60d0fe4f5311236168a109e7"],
+    "garden": "60d0fe4f5311236168a109cb",
+    "url": "https://picsum.photos/200/305",
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  }
+]

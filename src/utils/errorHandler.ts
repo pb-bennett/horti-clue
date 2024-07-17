@@ -1,10 +1,6 @@
 import { CustomError } from "./CustomError";
 import Joi from "joi";
 
-// interface CustomError extends Error {
-//   status?: number;
-// }
-
 export const throwError = (
   error: string | Joi.ValidationError,
   errorCode: number

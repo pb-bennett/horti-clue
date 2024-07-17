@@ -6,6 +6,7 @@ const basePhotoSchema = Joi.object({
   description: Joi.string().optional(),
   createdBy: Joi.string().hex().length(24).required(),
   plantReferences: Joi.array().items(Joi.string().hex().length(24)).required(),
+  garden: Joi.string().hex().length(24).required(),
 });
 
 const patchPhotoSchema = basePhotoSchema.fork(

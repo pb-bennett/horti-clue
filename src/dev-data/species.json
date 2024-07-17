@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "60d0fe4f5311236168a109cd",
+    "commonName": "Tomato",
+    "scientificName": "Solanum lycopersicum",
+    "description": "A red, edible fruit/vegetable.",
+    "lightRequirements": "Full Sun",
+    "externalUrls": [
+      {
+        "_id": "60d0fe4f5311236168a109d2",
+        "url": "https://en.wikipedia.org/wiki/Tomato",
+        "description": "Wikipedia page for Tomato",
+        "createdAt": "2023-07-10T14:00:00Z",
+        "updatedAt": "2023-07-10T14:00:00Z",
+        "createdBy": "60d0fe4f5311236168a109cb"
+      }
+    ],
+    "tags": ["vegetable", "fruit"],
+    "notes": [
+      {
+        "_id": "60d0fe4f5311236168a109d1",
+        "text": "Requires lots of sunlight.",
+        "createdAt": "2023-07-10T14:00:00Z",
+        "updatedAt": "2023-07-10T14:00:00Z",
+        "createdBy": "60d0fe4f5311236168a109cb"
+      }
+    ],
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  },
+  {
+    "_id": "60d0fe4f5311236168a109ce",
+    "commonName": "Basil",
+    "scientificName": "Ocimum basilicum",
+    "description": "A culinary herb.",
+    "lightRequirements": "Full Sun",
+    "externalUrls": [
+      {
+        "_id": "60d0fe4f5311236168a109d4",
+        "url": "https://en.wikipedia.org/wiki/Basil",
+        "description": "Wikipedia page for Basil",
+        "createdAt": "2023-07-10T14:00:00Z",
+        "updatedAt": "2023-07-10T14:00:00Z",
+        "createdBy": "60d0fe4f5311236168a109cb"
+      }
+    ],
+    "tags": ["herb"],
+    "notes": [
+      {
+        "_id": "60d0fe4f5311236168a109d3",
+        "text": "Best grown in warm weather.",
+        "createdAt": "2023-07-10T14:00:00Z",
+        "updatedAt": "2023-07-10T14:00:00Z",
+        "createdBy": "60d0fe4f5311236168a109cb"
+      }
+    ],
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  },
+  {
+    "_id": "60d0fe4f5311236168a109cf",
+    "commonName": "Rose",
+    "scientificName": "Rosa",
+    "description": "A woody perennial flowering plant.",
+    "lightRequirements": "Full Sun",
+    "externalUrls": [
+      {
+        "_id": "60d0fe4f5311236168a109d6",
+        "url": "https://en.wikipedia.org/wiki/Rose",
+        "description": "Wikipedia page for Rose",
+        "createdAt": "2023-07-10T14:00:00Z",
+        "updatedAt": "2023-07-10T14:00:00Z",
+        "createdBy": "60d0fe4f5311236168a109cb"
+      }
+    ],
+    "tags": ["flower", "ornamental"],
+    "notes": [
+      {
+        "_id": "60d0fe4f5311236168a109d5",
+        "text": "Prune regularly to promote growth.",
+        "createdAt": "2023-07-10T14:00:00Z",
+        "updatedAt": "2023-07-10T14:00:00Z",
+        "createdBy": "60d0fe4f5311236168a109cb"
+      }
+    ],
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  },
+  {
+    "_id": "60d0fe4f5311236168a109d0",
+    "commonName": "Lavender",
+    "scientificName": "Lavandula",
+    "description": "A flowering plant in the mint family.",
+    "lightRequirements": "Full Sun",
+    "externalUrls": [
+      {
+        "_id": "60d0fe4f5311236168a109d8",
+        "url": "https://en.wikipedia.org/wiki/Lavender",
+        "description": "Wikipedia page for Lavender",
+        "createdAt": "2023-07-10T14:00:00Z",
+        "updatedAt": "2023-07-10T14:00:00Z",
+        "createdBy": "60d0fe4f5311236168a109cb"
+      }
+    ],
+    "tags": ["herb", "ornamental"],
+    "notes": [
+      {
+        "_id": "60d0fe4f5311236168a109d7",
+        "text": "Thrives in well-drained soil.",
+        "createdAt": "2023-07-10T14:00:00Z",
+        "updatedAt": "2023-07-10T14:00:00Z",
+        "createdBy": "60d0fe4f5311236168a109cb"
+      }
+    ],
+    "createdBy": "60d0fe4f5311236168a109ca",
+    "createdAt": "2023-07-10T14:00:00Z",
+    "updatedAt": "2023-07-10T14:00:00Z"
+  }
+]
