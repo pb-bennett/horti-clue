@@ -1,12 +1,10 @@
 [
   {
-    "_id": "60d0fe4f5311236168a109e1",
     "species": "60d0fe4f5311236168a109cd",
     "garden": "60d0fe4f5311236168a109cb",
     "coordinates": { "type": "Point", "coordinates": [10.2115, 59.1459] },
     "notes": [
       {
-        "_id": "60d0fe4f5311236168a109f1",
         "text": "First tomato plant, thriving well.",
         "createdAt": "2023-07-10T14:00:00Z",
         "updatedAt": "2023-07-10T14:00:00Z",
@@ -15,10 +13,10 @@
     ],
     "measurements": [
       {
-        "_id": "60d0fe4f5311236168a109f2",
         "height": 30,
         "width": 20,
-        "date": "2023-07-10T14:00:00Z"
+        "date": "2023-07-10T14:00:00Z",
+        "measuredBy": "60d0fe4f5311236168a109ca"
       }
     ],
     "createdBy": "60d0fe4f5311236168a109ca",
@@ -26,13 +24,11 @@
     "updatedAt": "2023-07-10T14:00:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109e2",
     "species": "60d0fe4f5311236168a109cd",
     "garden": "60d0fe4f5311236168a109cb",
     "coordinates": { "type": "Point", "coordinates": [10.21152, 59.14592] },
     "notes": [
       {
-        "_id": "60d0fe4f5311236168a109f3",
         "text": "Second tomato plant, needs more water.",
         "createdAt": "2023-07-10T14:00:00Z",
         "updatedAt": "2023-07-10T14:00:00Z",
@@ -41,10 +37,10 @@
     ],
     "measurements": [
       {
-        "_id": "60d0fe4f5311236168a109f4",
         "height": 25,
         "width": 18,
-        "date": "2023-07-10T14:00:00Z"
+        "date": "2023-07-10T14:00:00Z",
+        "measuredBy": "60d0fe4f5311236168a109ca"
       }
     ],
     "createdBy": "60d0fe4f5311236168a109ca",
@@ -52,13 +48,11 @@
     "updatedAt": "2023-07-10T14:00:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109e3",
     "species": "60d0fe4f5311236168a109ce",
     "garden": "60d0fe4f5311236168a109cb",
     "coordinates": { "type": "Point", "coordinates": [10.21154, 59.14594] },
     "notes": [
       {
-        "_id": "60d0fe4f5311236168a109f5",
         "text": "First basil plant, doing well.",
         "createdAt": "2023-07-10T14:00:00Z",
         "updatedAt": "2023-07-10T14:00:00Z",
@@ -67,10 +61,10 @@
     ],
     "measurements": [
       {
-        "_id": "60d0fe4f5311236168a109f6",
         "height": 15,
         "width": 10,
-        "date": "2023-07-10T14:00:00Z"
+        "date": "2023-07-10T14:00:00Z",
+        "measuredBy": "60d0fe4f5311236168a109ca"
       }
     ],
     "createdBy": "60d0fe4f5311236168a109ca",
@@ -78,13 +72,11 @@
     "updatedAt": "2023-07-10T14:00:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109e4",
     "species": "60d0fe4f5311236168a109ce",
     "garden": "60d0fe4f5311236168a109cb",
     "coordinates": { "type": "Point", "coordinates": [10.21156, 59.14596] },
     "notes": [
       {
-        "_id": "60d0fe4f5311236168a109f7",
         "text": "Second basil plant, needs pruning.",
         "createdAt": "2023-07-10T14:00:00Z",
         "updatedAt": "2023-07-10T14:00:00Z",
@@ -93,10 +85,10 @@
     ],
     "measurements": [
       {
-        "_id": "60d0fe4f5311236168a109f8",
         "height": 12,
         "width": 8,
-        "date": "2023-07-10T14:00:00Z"
+        "date": "2023-07-10T14:00:00Z",
+        "measuredBy": "60d0fe4f5311236168a109ca"
       }
     ],
     "createdBy": "60d0fe4f5311236168a109ca",
@@ -104,13 +96,11 @@
     "updatedAt": "2023-07-10T14:00:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109e5",
     "species": "60d0fe4f5311236168a109cf",
     "garden": "60d0fe4f5311236168a109cb",
     "coordinates": { "type": "Point", "coordinates": [10.21158, 59.14598] },
     "notes": [
       {
-        "_id": "60d0fe4f5311236168a109f9",
         "text": "First rose plant, beautiful blooms.",
         "createdAt": "2023-07-10T14:00:00Z",
         "updatedAt": "2023-07-10T14:00:00Z",
@@ -119,10 +109,10 @@
     ],
     "measurements": [
       {
-        "_id": "60d0fe4f5311236168a109fa",
         "height": 50,
         "width": 40,
-        "date": "2023-07-10T14:00:00Z"
+        "date": "2023-07-10T14:00:00Z",
+        "measuredBy": "60d0fe4f5311236168a109ca"
       }
     ],
     "createdBy": "60d0fe4f5311236168a109ca",
@@ -130,13 +120,11 @@
     "updatedAt": "2023-07-10T14:00:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109e6",
     "species": "60d0fe4f5311236168a109cf",
     "garden": "60d0fe4f5311236168a109cb",
     "coordinates": { "type": "Point", "coordinates": [10.2116, 59.146] },
     "notes": [
       {
-        "_id": "60d0fe4f5311236168a109fb",
         "text": "Second rose plant, needs more sunlight.",
         "createdAt": "2023-07-10T14:00:00Z",
         "updatedAt": "2023-07-10T14:00:00Z",
@@ -145,10 +133,10 @@
     ],
     "measurements": [
       {
-        "_id": "60d0fe4f5311236168a109fc",
         "height": 45,
         "width": 38,
-        "date": "2023-07-10T14:00:00Z"
+        "date": "2023-07-10T14:00:00Z",
+        "measuredBy": "60d0fe4f5311236168a109ca"
       }
     ],
     "createdBy": "60d0fe4f5311236168a109ca",
@@ -156,13 +144,11 @@
     "updatedAt": "2023-07-10T14:00:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109e7",
     "species": "60d0fe4f5311236168a109d0",
     "garden": "60d0fe4f5311236168a109cb",
     "coordinates": { "type": "Point", "coordinates": [10.21162, 59.14602] },
     "notes": [
       {
-        "_id": "60d0fe4f5311236168a109fd",
         "text": "First lavender plant, smells great.",
         "createdAt": "2023-07-10T14:00:00Z",
         "updatedAt": "2023-07-10T14:00:00Z",
@@ -171,10 +157,10 @@
     ],
     "measurements": [
       {
-        "_id": "60d0fe4f5311236168a109fe",
         "height": 20,
         "width": 15,
-        "date": "2023-07-10T14:00:00Z"
+        "date": "2023-07-10T14:00:00Z",
+        "measuredBy": "60d0fe4f5311236168a109ca"
       }
     ],
     "createdBy": "60d0fe4f5311236168a109ca",
@@ -182,13 +168,11 @@
     "updatedAt": "2023-07-10T14:00:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109e8",
     "species": "60d0fe4f5311236168a109d0",
     "garden": "60d0fe4f5311236168a109cb",
     "coordinates": { "type": "Point", "coordinates": [10.21164, 59.14604] },
     "notes": [
       {
-        "_id": "60d0fe4f5311236168a109ff",
         "text": "Second lavender plant, needs less water.",
         "createdAt": "2023-07-10T14:00:00Z",
         "updatedAt": "2023-07-10T14:00:00Z",
@@ -197,10 +181,10 @@
     ],
     "measurements": [
       {
-        "_id": "60d0fe4f5311236168a10a0",
         "height": 18,
         "width": 12,
-        "date": "2023-07-10T14:00:00Z"
+        "date": "2023-07-10T14:00:00Z",
+        "measuredBy": "60d0fe4f5311236168a109ca"
       }
     ],
     "createdBy": "60d0fe4f5311236168a109ca",
