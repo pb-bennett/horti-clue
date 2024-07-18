@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import util from "util";
+import * as argon2 from "argon2";
+
 import { readFileSync } from "fs";
 import UserModel from "../models/User"; // Adjust path to your User model
 import GardenModel from "../models/Garden"; // Adjust path to your Garden model
@@ -35,6 +37,14 @@ const loadData = async () => {
     const photos = JSON.parse(
       readFileSync("./dist/dev-data/photos.json", "utf-8")
     );
+
+    let usersHashed = [];
+    for (const user of users) {
+      const hashedPassword = await argon2.hash(user.password);
+      const { password, ...rest } = user;
+      usersHashed.push({ ...rest, password: hashedPassword });
+    }
+
     // console.log(util.inspect(gardens, { depth: null, colors: true }));
 
     await UserModel.deleteMany({}),
@@ -42,7 +52,7 @@ const loadData = async () => {
       await SpeciesModel.deleteMany({}),
       await PlantModel.deleteMany({}),
       await PhotoModel.deleteMany({}),
-      await UserModel.insertMany(users),
+      await UserModel.insertMany(usersHashed),
       await GardenModel.insertMany(gardens),
       await SpeciesModel.insertMany(species),
       await PlantModel.insertMany(plants),
