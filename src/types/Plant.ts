@@ -1,6 +1,6 @@
-import { Document, Types } from "mongoose";
+import { Document, Types } from 'mongoose';
 
-export interface PlantNote {
+export interface PlantNoteType {
   _id: Types.ObjectId;
   text: string;
   createdAt: Date;
@@ -8,7 +8,7 @@ export interface PlantNote {
   createdBy: Types.ObjectId;
 }
 
-export interface PlantMeasurement {
+export interface PlantMeasurementType {
   _id: Types.ObjectId;
   height?: number;
   width?: number;
@@ -16,14 +16,14 @@ export interface PlantMeasurement {
   measuredBy: Types.ObjectId;
 }
 
-export interface Plant extends Document {
+export interface PlantType extends Document {
   species: Types.ObjectId;
-  notes?: PlantNote[];
+  notes?: PlantNoteType[];
   location?: {
-    type: "Point";
+    type: 'Point';
     coordinates: [number, number]; // [longitude, latitude]
   };
-  measurements?: PlantMeasurement[];
+  measurements?: PlantMeasurementType[];
   garden: Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;

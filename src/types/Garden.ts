@@ -1,9 +1,9 @@
-import { Document, Types } from "mongoose";
+import { Document, Types } from 'mongoose';
 
-export interface Garden extends Document {
+export interface GardenType extends Document {
   name: string;
   boundary: {
-    type: "Polygon";
+    type: 'Polygon';
     coordinates: [number, number][]; // Array of [longitude, latitude] pairs
   };
   users: Types.ObjectId[];

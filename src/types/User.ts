@@ -1,7 +1,7 @@
-import { Document, ObjectId } from "mongoose";
+import { Document, ObjectId } from 'mongoose';
 
 // Model type definition
-export interface UserDocument extends Document {
+export interface UserType extends Document {
   email: string;
   password: string;
   firstName: string;
@@ -10,7 +10,7 @@ export interface UserDocument extends Document {
 }
 
 // Request body interfaces
-export interface RegisterUserRequest {
+export interface RegisterUserRequestType {
   email: string;
   password: string;
   confirmPassword: string;
@@ -18,20 +18,20 @@ export interface RegisterUserRequest {
   lastName: string;
 }
 
-export interface UpdateUserRequest {
+export interface UpdateUserRequestType {
   email?: string;
   password?: string;
   firstName?: string;
   lastName?: string;
 }
 
-export interface LoginUserRequest {
+export interface LoginUserRequestType {
   email: string;
   password: string;
 }
 
 // User Params
 
-export interface UserParams {
+export interface UserParamsType {
   id: string;
 }

@@ -1,6 +1,6 @@
-import { Document, Types } from "mongoose";
+import { Document, Types } from 'mongoose';
 
-export interface SpeciesUrl {
+export interface SpeciesUrlType {
   _id: Types.ObjectId;
   url: string;
   description?: string;
@@ -9,7 +9,7 @@ export interface SpeciesUrl {
   createdBy: Types.ObjectId;
 }
 
-export interface SpeciesNote {
+export interface SpeciesNoteType {
   _id: Types.ObjectId;
   text: string;
   createdAt: Date;
@@ -17,14 +17,14 @@ export interface SpeciesNote {
   createdBy: Types.ObjectId;
 }
 
-export interface SpeciesDocument extends Document {
+export interface SpeciesType extends Document {
   commonName: string;
   scientificName: string;
   description?: string;
   lightRequirements?: string;
-  externalUrls?: SpeciesUrl[]; // Array of SpeciesUrl objects (optional)
+  externalUrls?: SpeciesUrlType[]; // Array of SpeciesUrl objects (optional)
   tags?: string[];
-  notes?: SpeciesNote[]; // Array of SpeciesNote objects (optional)
+  notes?: SpeciesNoteType[]; // Array of SpeciesNote objects (optional)
   createdAt: Date;
   updatedAt: Date;
   createdBy: Types.ObjectId;

@@ -1,6 +1,6 @@
-import { Document, Types } from "mongoose";
+import { Document, Types } from 'mongoose';
 
-export interface Photo extends Document {
+export interface PhotoType extends Document {
   url: string;
   description?: string;
   createdBy: Types.ObjectId;
