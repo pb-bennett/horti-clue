@@ -7,6 +7,7 @@ export interface UserType extends Document {
   firstName: string;
   lastName: string;
   _id: ObjectId;
+  siteAdmin: boolean;
 }
 
 // Request body interfaces

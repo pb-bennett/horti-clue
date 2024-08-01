@@ -1,5 +1,5 @@
-import Joi from "joi";
-import { Plant, PlantNote, PlantMeasurement } from "../types/Plant";
+import Joi from 'joi';
+import { PlantType, PlantNoteType, PlantMeasurementType } from '../types/Plant';
 
 const plantNoteSchema = Joi.object({
   text: Joi.string().required(),
@@ -17,22 +17,19 @@ const basePlantSchema = Joi.object({
   species: Joi.string().hex().length(24).required(),
   notes: Joi.array().items(plantNoteSchema).optional(),
   location: Joi.object({
-    type: Joi.string().valid("Point").required(),
+    type: Joi.string().valid('Point').required(),
     coordinates: Joi.array().items(Joi.number()).length(2).required(),
   }).required(),
   measurements: Joi.array().items(plantMeasurementSchema).optional(),
   garden: Joi.string().hex().length(24).required(),
 });
 
-const patchPlantSchema = basePlantSchema.fork(
-  Object.keys(basePlantSchema.describe().keys),
-  (field) => field.optional()
-);
+const patchPlantSchema = basePlantSchema.fork(Object.keys(basePlantSchema.describe().keys), (field) => field.optional());
 
-export const validatePlantPost = (plant: Partial<Plant>) => {
+export const validatePlantPost = (plant: Partial<PlantType>) => {
   return basePlantSchema.validate(plant, { abortEarly: false });
 };
 
-export const validatePlantPatch = (plant: Partial<Plant>) => {
+export const validatePlantPatch = (plant: Partial<PlantType>) => {
   return patchPlantSchema.validate(plant, { abortEarly: false });
 };

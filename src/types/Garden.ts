@@ -10,4 +10,5 @@ export interface GardenType extends Document {
   admins: Types.ObjectId[];
   createdAt: Date;
   updatedAt: Date;
+  _id: Types.ObjectId;
 }

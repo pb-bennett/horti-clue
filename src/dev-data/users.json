@@ -4,13 +4,23 @@
     "firstName": "John",
     "lastName": "Doe",
     "email": "john@example.com",
-    "password": "pass123"
+    "password": "pass123",
+    "siteAdmin": false
   },
   {
     "_id": "60d0fe4f5311236168a109cb",
     "firstName": "Jane",
     "lastName": "Doe",
     "email": "jane@example.com",
-    "password": "pass123"
+    "password": "pass123",
+    "siteAdmin": false
+  },
+  {
+    "_id": "60d0fe4f5311236168a109cb",
+    "firstName": "Admin",
+    "lastName": "Doe",
+    "email": "admin@example.com",
+    "password": "pass123",
+    "siteAdmin": true
   }
 ]

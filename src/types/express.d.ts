@@ -1,7 +1,5 @@
 // src/types/express.d.ts
-
-import { UserDocument } from "../models/User"; // Adjust the import path as necessary
-
+import * as express from 'express';
 declare global {
   namespace Express {
     interface Request {
@@ -10,6 +8,8 @@ declare global {
         firstName: string;
         lastName: string;
         userId: string;
+        userGardensIds: string[];
+        adminGardensIds: string[];
       };
     }
   }
